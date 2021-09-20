@@ -18,7 +18,6 @@ function preload(){
   }
 
 function setup(){
-
   createCanvas(400,400);
 
   garden=createSprite(200,200);
@@ -40,6 +39,8 @@ function setup(){
 function draw() {
   background(0);
 
+  rabbit.x = World.mouseX;
+  
   edges= createEdgeSprites();
   rabbit.collide(edges);
   rabbit.bounceOff(wall1);
